@@ -1,0 +1,69 @@
+# 1) Core Game Loop
+"Write vanilla JS for a 4x3 memory-matching grid. Each card has: id, type ('stress'|'cope'), text, and img (data URI). 
+Flip logic: first click flips; second click checks for pair (same id, different type). 
+Lock input during comparison; keep matched cards flipped; update score and pairs left. 
+Expose functions: buildDeck(), renderGrid(), flipCard(), checkMatch(), onWin()."
+
+# 2) Timers & HUD
+"Add a timer that starts when the first card flips and stops on win. 
+Update a <span id='time'> with m:ss every 200ms. 
+Add HUD fields for score and pairs left. 
+Ensure resetGame() resets timer, counters, and UI."
+
+# 3) Result Modal + Persistence
+"Create a victory modal (<dialog>) that shows time, score, and a list of unique coping tips. 
+Store the fastest time in localStorage under 'mindmatch_best_time'. 
+Display 'Best: m:ss (lower is better)' and update it on new PB."
+
+# 4) High-Contrast & Responsive CSS
+"Write CSS to ensure AA contrast or better for text on the modal and cards. 
+Provide responsive grid: 4x3 on desktop, 3x4 on tablet, 2x6 on small phones. 
+Maintain 3:4 card aspect ratio with .card3d .inner and transform 3D flip."
+
+# 5) Web Audio API (No External Files)
+"Implement flip/match/win sounds using Web Audio API only (no remote audio). 
+Create initAudioCtx(), fxFlip(), fxMatch(), fxWin(), and unlockAudioCtx() to satisfy user-gesture requirements on mobile Safari. 
+Gate all audio behind a 'muted' boolean and a toggle button."
+
+# 6) Keyboard & A11y
+"Add keyboard accessibility: Tab to focus cards, Enter/Space to flip. 
+Announce flips and matches with aria-live='polite' updates. 
+Ensure focus styles are visible and non-reliant on color alone."
+
+# 7) State Machine Guardrails
+"Refactor core logic into a tiny finite state machine with states: 'idle', 'firstFlip', 'compare', 'won'. 
+Disallow flips except in allowed states; prevent race conditions with setTimeout during compare animations."
+
+# 8) Animation & Haptics
+"Add CSS transitions for card flip (.35s) and a small 'pulse' on successful match. 
+On mobile, call navigator.vibrate([15, 30, 15]) on match if supported, guarded by feature detection."
+
+# 9) Error Handling & Fallbacks
+"Add defensive checks: if deck fails to build, show alert with a helpful message; 
+if images (data URIs) fail, fall back to emoji text; if localStorage is blocked, skip PB saving gracefully."
+
+# 10) Mobile Performance
+"Optimize for low-end phones: use will-change: transform on .inner; avoid heavy shadows; 
+minimize reflows by batching DOM writes; replace setInterval timers with requestAnimationFrame for smoother UI."
+
+# 11) Modularization
+"Split logic into modules (ESM) if possible:
+- deck.js (buildDeck, shuffle)
+- ui.js (renderGrid, updateHUD, modal controls)
+- audio.js (WebAudio helpers)
+- game.js (state, handlers, start/restart)
+Provide import/export stubs that work when served from a local server."
+
+# 12) Theming & Config
+"Create a config object:
+{
+  grid: { columnsDesktop: 4, columnsTablet: 3, columnsPhone: 2 },
+  palette: { stress: [...], cope: [...] },
+  pairs: [ ... ]
+}
+Use this to control layout and colors without touching logic."
+
+# 13) Testable Helpers
+"Write pure utility functions with small tests (no framework required):
+- formatTime(seconds) -> 'm:ss'
+- rizzRa

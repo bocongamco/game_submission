@@ -1,0 +1,42 @@
+# 1. Theme & Purpose
+"Suggest game concepts that address social challenges relevant to young people in Australia or Vietnam.
+The game must be playable in under 5 minutes, browser-only, and raise awareness about topics like
+mental health, social inclusion, sustainability, or community wellbeing."
+
+# 2. Choosing the Issue
+"I want something light-hearted but still meaningful. Which social issue could fit a fun web game
+that also educates the player indirectly? Suggest a few options that mix humor with learning outcomes."
+
+# 3. Brainstorming Game Formats
+"Give me short game concepts based on board, card, or dice mechanics that could work in 2D with HTML/CSS/JS only.
+Each should connect the theme (like stress, climate, or equality) directly to gameplay — not just visuals.
+Examples: matching pairs, rolling for events, decision-based paths, trivia with moral outcomes."
+
+# 4. Idea Refinement
+"I like the idea of matching stress triggers with healthy coping actions.
+Expand that into a playable matching game that feels like a meme (‘Exam Arc vs Hydration Buff’) but still shares real mental-health tips."
+
+# 5. Player Motivation
+"How can I keep the game engaging for players under 3 minutes?
+Suggest a short feedback loop, scoring system, or rank mechanic (like 'Sigma Ascendant' or 'Zen Speedrun') 
+to make players want to replay and beat their previous best time."
+
+# 6. Educational Integration
+"Propose ways to include meaningful wellbeing information (hydration, journaling, rest, sunlight, etc.)
+without interrupting gameplay. Keep it lightweight — maybe show tips after each win or in a results summary."
+
+# 7. Tone and Style
+"Describe the visual and tonal style for a Gen Z audience — something that feels like a meme,
+uses emojis, pop language (‘rizz’, ‘NPC’, etc.), but still lands the message of self-awareness and balance."
+
+# 8. Replayability
+"Suggest simple randomization mechanics so each playthrough feels different:
+e.g., shuffle pairs, randomize card order, or mix new stress/cope pairs per round."
+
+# 9. Social Connection
+"How can I add small social-sharing features so players can show their result
+('I achieved Based & Focused rank in Mind Match!') without external accounts or databases?"
+
+# 10. AI Involvement
+"Outline how an LLM could assist in building this project end-to-end —
+concept brainstorming, generating stress/cope pair text, creating SVG art, coding logic, and writing copy for the UI."

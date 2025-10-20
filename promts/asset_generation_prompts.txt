@@ -1,0 +1,58 @@
+# 1. Card Design Variations
+"Generate flat 2D card illustrations that look minimal yet expressive. 
+Each card should include an emoji or simple symbol (e.g., 💀 for stress, ☀️ for calm) 
+on a soft gradient background. Maintain rounded corners and use subtle drop shadows."
+
+# 2. Background Theme
+"Create a looping background gradient for the main game screen that transitions 
+from a calm mint-teal (#7ff7c8) to a deep navy (#0e1427). 
+It should feel relaxing and modern, with slight movement or parallax effect if possible."
+
+# 3. Audio / SFX Prompts
+"Suggest sound effect concepts for flipping cards, matching pairs, and winning. 
+Each should be short (under 0.5s), punchy, and upbeat — something like a click, chime, or pop.
+Describe how to reproduce them using Web Audio API without external audio files."
+
+# 4. Typography & UI Style
+"Recommend web fonts and styles for a Gen Z audience. 
+Title font should be pixel or retro-gaming style (like 'Press Start 2P'), 
+while body text should use a clean sans-serif (like 'Poppins'). 
+Keep accessibility in mind — ensure text contrast is at least 4.5:1."
+
+# 5. Modal & Icon Aesthetic
+"Design a high-contrast pop-up modal to celebrate a win. 
+It should have a glowing border, soft neon blues or purples, 
+and icons for 'Play Again' and 'Share Score'. 
+Make the overall look resemble a polished game overlay."
+
+# 6. Visual Consistency
+"Create a color palette system for two card categories:
+  - Stress Cards: gradients of warm red, coral, and magenta
+  - Coping Cards: gradients of mint, teal, and blue-green
+Ensure both contrast well and remain readable for color-blind users."
+
+# 7. Loading Animation
+"Generate a minimalist loading animation using CSS only — 
+for example, 3 bouncing dots or a rotating brain icon 🧠.
+It should match the same color theme as the cards."
+
+# 8. Ambient Effect Prompt
+"Describe how to use subtle CSS blur or opacity overlays to 
+simulate a 'fog of stress' on the board background that clears 
+slightly each time the player matches a pair — symbolizing progress."
+
+# 9. Badge System
+"Design small achievement badges for milestones like:
+  - 'Focus Buff' for completing under 1 minute
+  - 'Mind Gym Member' for 3 wins in a row
+  - 'Zen Speedrun' for a perfect game (no mismatches)
+Each badge should fit in a 64x64px rounded-square frame."
+
+# 10. Accessibility Icons
+"Suggest a simple icon set (SVG or emoji) for UI elements:
+  - Sound On/Off
+  - Restart
+  - Menu
+  - Time
+  - Score
+Make them minimalist, outline style, and consistent with modern web UI."

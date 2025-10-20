@@ -1,0 +1,72 @@
+# 1. Debugging Logic
+"The game sometimes doesn’t start when clicking the Start button. 
+Help me debug the script step-by-step — check event listeners, 
+hidden class toggling, and console errors to ensure the game initializes correctly."
+
+# 2. Audio Troubleshooting
+"The Web Audio sounds don’t play unless I refresh or click twice. 
+Explain how to unlock audio contexts safely on Safari and Chrome. 
+Make sure sound effects play instantly on the first user action."
+
+# 3. Visual Contrast Issues
+"The result modal has low contrast on dark backgrounds. 
+Give me CSS fixes to increase contrast, improve readability, and make it more accessible. 
+Prefer darker backgrounds and bright text with subtle glow effects."
+
+# 4. Responsiveness Testing
+"Make sure the layout scales cleanly from 1080p desktops down to small mobile screens.
+The grid should reflow from 4x3 to 2x6 smoothly. Add CSS breakpoints and 
+ensure the text and buttons stay centered even in narrow viewports."
+
+# 5. Accessibility Enhancements
+"Add ARIA attributes and keyboard navigation for the game grid so users can
+flip cards using Enter/Space and hear updates via aria-live labels."
+
+# 6. Smooth Transitions
+"Make the card flip animations smoother — use `transform-style: preserve-3d`
+and a `.35s` transition on `.inner`. Add a pulse or scale-up effect on matches."
+
+# 7. Data Persistence
+"Implement localStorage tracking for the best time and show it in the result modal.
+If localStorage isn’t available, skip gracefully without throwing an error."
+
+# 8. Code Simplification
+"Refactor the flip and match logic to be simpler and avoid race conditions.
+Combine lockBoard, flipped, and matched checks into a small finite state flow."
+
+# 9. Offline Stability
+"Ensure all assets (SVGs, audio) work offline. 
+Replace CDN audio links with Web Audio API tones that generate locally."
+
+# 10. Polish UI Feedback
+"Add a light success vibration or a quick visual pulse when the player makes a match. 
+If `navigator.vibrate()` exists, trigger [20, 30, 20] on matches."
+
+# 11. Modal & Restart Flow
+"When a player wins and clicks 'Play Again', 
+the modal should close, reset state, rebuild deck, and restart timer without refreshing the page."
+
+# 12. Share Button Enhancement
+"Improve the Share Score button. 
+If Web Share API is available, use it to post to mobile share sheets; 
+otherwise, copy text to clipboard and show 'Copied!' feedback for 1 second."
+
+# 13. Game Feel Improvements
+"Give me quick tweaks to make the game more satisfying:
+shorter flip delay, snappy audio feedback, 
+and slightly faster animations for smooth replayability."
+
+# 14. Performance Optimization
+"Optimize the grid rendering for low-end devices: 
+minimize repainting, use will-change: transform on cards, 
+and batch DOM updates to prevent frame drops."
+
+# 15. Final QA Checklist
+"Create a simple QA checklist for this web game:
+✓ Start and Restart buttons work
+✓ Sounds play after one click
+✓ Grid builds correctly
+✓ Matches increment score
+✓ Timer resets properly
+✓ Modal appears on win
+✓ Best score saves"
