@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mind Match: Sigma vs Stress</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="bg-gradient"></div>
+
+  <!-- ===== MENU ===== -->
+  <main id="menu" class="screen">
+    <div class="card glass">
+      <h1 class="title">🧠 Mind Match: <span class="accent">Sigma vs Stress</span></h1>
+      <p class="tagline">Match the <b>stress arcs</b> to the <b>coping moves</b>. Raise your mental rizz. Touch grass IRL. ✨</p>
+
+      <section class="howto">
+        <h2>How to Play</h2>
+        <ul>
+          <li>Flip 2 cards. If a <em>Stress</em> card matches its <em>Coping</em> card → keep it &amp; score +1.</li>
+          <li>Mismatch? Cards flip back. Cooked Bro. Try again.</li>
+          <li>Match all pairs to win and unlock your <b>Mental Rizz</b> level.</li>
+        </ul>
+      </section>
+
+      <div class="controls">
+        <button id="startBtn" class="btn primary">Start (No NPCs Allowed)</button>
+        <button id="muteBtn" class="btn">🔊 Sound: Off</button>
+      </div>
+
+      <footer class="footnote">
+        Built for a quick awareness jam. Tips shown are general habits, not medical advice.
+      </footer>
+    </div>
+  </main>
+
+  <!-- ===== GAME ===== -->
+  <section id="game" class="screen hidden" aria-live="polite">
+    <header class="hud">
+      <div class="hud-item">Score: <span id="score">0</span></div>
+      <div class="hud-item">Pairs Left: <span id="pairsLeft">6</span></div>
+      <div class="hud-item">Time: <span id="time">0:00</span></div>
+      <div class="hud-item">
+        <button id="restartBtn" class="btn small">↻ Restart</button>
+        <button id="homeBtn" class="btn small">🏠 Menu</button>
+      </div>
+    </header>
+
+    <div id="grid" class="grid" role="grid" aria-label="Mind Match board"></div>
+  </section>
+
+  <!-- ===== RESULT MODAL ===== -->
+  <dialog id="resultModal" class="modal">
+    <div class="modal-body">
+      <h2>W RIZZ! 🏆</h2>
+      <p id="summaryText"></p>
+      <div id="learnedList" class="learned"></div>
+
+      <div class="controls">
+        <button id="playAgainBtn" class="btn primary">Play Again</button>
+        <button id="shareBtn" class="btn">Share Score</button>
+      </div>
+
+      <p class="best">Best Score (fastest time): <span id="bestScore">—</span></p>
+    </div>
+  </dialog>
+
+  <audio id="sfxFlip" src="https://cdn.jsdelivr.net/gh/jshawl/AudioFX@master/flipcard.wav" preload="auto"></audio>
+  <audio id="sfxMatch" src="https://cdn.jsdelivr.net/gh/jshawl/AudioFX@master/coin.wav" preload="auto"></audio>
+  <audio id="sfxWin"   src="https://cdn.jsdelivr.net/gh/jshawl/AudioFX@master/win.wav" preload="auto"></audio>
+
+ <!-- Load data first -->
+ <script src="./data.js"></script>
+ <!-- Then the game logic -->
+ <script src="./script.js"></script>
+</body>
+</html>
